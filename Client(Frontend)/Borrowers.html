@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+</head>
+<body>
+   
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">ONLINE LIBRARY</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Books.html">Books</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Authors.html">Authors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Genres.html">Genres</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Borrowers.html">Borrowers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="BorrowerRecords.html">Borrowers Records</a>
+                  </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+            </nav>    
+            
+            <div class="text-bg-dark p-3"> 
+            Here you can find the Borrower
+            </div>
+            <div class="container mt-5">
+              <h3 class="text-center mb-4">Borrower Information</h3>
+              <table class="table table-striped table-bordered">
+                  <thead class="thead-dark">
+                      <tr>
+                          < <th>borrower_id</th>
+                          <th>borrower_name</th>
+                          <th>address</th>
+                          <th>phone</th>
+                          <th>email</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Alice Johnson</td>
+                        <td>123 Maple Street, Springfield</td>
+                        <td>555-1234</td>
+                        <td>alice.johnson@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Bob Smith</td>
+                        <td>456 Oak Avenue, Springfield</td>
+                        <td>555-5678</td>
+                        <td>bob.smith@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Charlie Brown</td>
+                        <td>789 Pine Road, Springfield</td>
+                        <td>555-8765</td>
+                        <td>charlie.brown@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Diana Prince</td>
+                        <td>101 Cherry Lane, Springfield</td>
+                        <td>555-4321</td>
+                        <td>diana.prince@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Eve Adams</td>
+                        <td>102 Apple Street, Springfield</td>
+                        <td>555-6789</td>
+                        <td>eve.adams@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>avicha</td>
+                        <td>[null]</td>
+                        <td>[null]</td>
+                        <td>[null]</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+    
+          <div class="container mt-5">
+            <!-- Add New Borrower Form -->
+            <h3 class="text-center mb-4">Add New Borrower</h3>
+            <form id="Add_Borrower_Form" class="p-4 border rounded bg-light">
+                <div class="mb-3">
+                    <label for="borrower_name" class="form-label">Borrower Name</label>
+                    <input type="text" id="borrower_name" name="borrower_name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Borrower Address</label>
+                    <input type="text" id="address" name="address" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Borrower Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Borrower Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-success">Add Borrower</button>
+            </form>
+    
+            <!-- Update Borrower Form -->
+            <h3 class="text-center mt-5 mb-4">Update Borrower Information</h3>
+            <form id="Update_Borrower_Form" class="p-4 border rounded bg-light">
+                <div class="mb-3">
+                    <label for="borrower_id" class="form-label">Borrower ID</label>
+                    <input type="number" id="borrower_id" name="borrower_id" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="borrower_name" class="form-label">Borrower Name</label>
+                    <input type="text" id="borrower_name" name="borrower_name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Borrower Address</label>
+                    <input type="text" id="address" name="address" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Borrower Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Borrower Email</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-warning">Update Borrower</button>
+            </form>
+    
+            <!-- Delete Borrower Form -->
+            <h3 class="text-center mt-5 mb-4">Delete Borrower</h3>
+            <form id="Delete_Borrower_Form" class="p-4 border rounded bg-light">
+                <div class="mb-3">
+                    <label for="borrower_id" class="form-label">Borrower ID</label>
+                    <input type="number" id="borrower_id" name="borrower_id" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Delete Borrower</button>
+            </form>
+        </div>
+    
+        <script>
+            // Add Borrower Form Script
+            const Add_Record_Form = document.getElementById('Add_Record_Form')
+        Add_Record_Form.addEventListener('submit',async function(event){
+            const formData =new FormData(Add_Record_Form)
+            const book_id= formData.get('book_id')
+            const borrower_id= formData.get('borrower_id')
+            const borrow_date= formData.get('borrow_date')
+            const record={book_id,borrower_id,borrow_date} 
+            const response= await fetch('/createborrowingrecord',{
+                method:'POST',
+                headers: {
+                    'content-Type': 'application/json'
+                },
+                    body: JSON.stringify(record)
+            })
+        })
+            // Update Borrower Form Script
+            const Update_Borrower_Form = document.getElementById('Update_Borrower_Form');
+            Update_Borrower_Form.addEventListener('submit', async function(event){
+                event.preventDefault(); // Prevent default form submission
+                const formData = new FormData(Update_Borrower_Form);
+                const borrower_id = formData.get('borrower_id');
+                const borrower_name = formData.get('borrower_name');
+                const address = formData.get('address');
+                const phone = formData.get('phone');
+                const email = formData.get('email');
+                const updateborrower = {borrower_id, borrower_name, address, phone, email};
+                const response = await fetch('/updatespecificborrower', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(updateborrower)
+                });
+            });
+    
+            // Delete Borrower Form Script
+            const Delete_Borrower_Form = document.getElementById('Delete_Borrower_Form');
+            Delete_Borrower_Form.addEventListener('submit', async function(event){
+                event.preventDefault(); // Prevent default form submission
+                const formData = new FormData(Delete_Borrower_Form);
+                const borrower_id = formData.get('borrower_id');
+                const deleteborrower = {borrower_id};
+                const response = await fetch('/deleteborrower', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(deleteborrower)
+                });
+            });
+        </script>
+    
+
+<a class="btn btn-primary" href="index.html" role="button">Back to Home</a> 
+        <footer>&copy; Online Library Management System</footer> 
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+    </body>
+    </html>
